@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --nagi-red: #ff0055; 
-            --nagi-cyan: #00f7ff; 
-            --pc: #007bff; 
-            --mobile: #28a745; 
-            --bypass: #6f42c1; 
-            --bg: #050508; 
-            --card: rgba(15, 15, 18, 0.9); 
+        :root {  
+            --nagi-red: #ff0055;  
+            --nagi-cyan: #00f7ff;  
+            --pc: #007bff;  
+            --mobile: #28a745;  
+            --bypass: #6f42c1;  
+            --bg: #050508;  
+            --card: rgba(15, 15, 18, 0.9);  
         }
 
         body { background: var(--bg); color: white; font-family: 'Cairo', sans-serif; margin: 0; overflow-x: hidden; }
@@ -23,42 +23,43 @@
         .star { position: absolute; background: var(--nagi-red); border-radius: 50%; box-shadow: 0 0 10px var(--nagi-red); filter: blur(1px); opacity: 0; animation: blink-move var(--speed) infinite ease-in-out; }
         @keyframes blink-move { 0% { opacity: 0; transform: translateY(0); } 50% { opacity: 0.8; } 100% { opacity: 0; transform: translateY(-40px); } }
 
-        header { 
-            background: linear-gradient(135deg, var(--nagi-red), #9000ff); 
-            padding: 60px 20px; text-align: center; 
+        header {  
+            background: linear-gradient(135deg, var(--nagi-red), #9000ff);  
+            padding: 60px 20px; text-align: center;  
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
             box-shadow: 0 5px 30px rgba(255, 0, 85, 0.4);
         }
 
-        header h1 { font-size: 3rem; text-shadow: 0 0 20px rgba(255,255,255,0.5); letter-spacing: 5px; }
+        header h1 { font-size: 3rem; text-shadow: 0 0 20px rgba(255,255,255,0.5); letter-spacing: 5px; margin: 0; }
+        header p { margin-top: 10px; opacity: 0.9; }
 
-        .section-title { 
-            text-align: center; margin-top: 60px; font-size: 2rem; 
+        .section-title {  
+            text-align: center; margin-top: 60px; font-size: 2rem;  
             color: var(--nagi-cyan); text-shadow: 0 0 15px var(--nagi-cyan);
-            border-bottom: 2px solid var(--nagi-red); display: table; margin-left: auto; margin-right: auto; padding-bottom: 10px; 
+            border-bottom: 2px solid var(--nagi-red); display: table; margin-left: auto; margin-right: auto; padding-bottom: 10px;  
         }
-        
+         
         .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; padding: 40px 20px; }
-        
-        .card { 
-            background: var(--card); border: 1px solid rgba(255, 255, 255, 0.05); 
-            border-radius: 20px; width: 280px; padding: 25px; text-align: center; 
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); backdrop-filter: blur(15px); 
+         
+        .card {  
+            background: var(--card); border: 1px solid rgba(255, 255, 255, 0.05);  
+            border-radius: 20px; width: 280px; padding: 25px; text-align: center;  
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); backdrop-filter: blur(15px);  
             position: relative; overflow: hidden;
         }
-        
+         
         .card:hover { transform: translateY(-15px); border-color: var(--nagi-red); box-shadow: 0 15px 40px rgba(255, 0, 85, 0.3); }
         .price { font-size: 32px; font-weight: bold; margin: 15px 0; color: #fff; }
-        
-        .id-input { 
-            width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 10px; 
-            border: 1px solid #333; background: #000; color: var(--nagi-cyan); 
+         
+        .id-input {  
+            width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 10px;  
+            border: 1px solid #333; background: #000; color: var(--nagi-cyan);  
             text-align: center; outline: none; font-family: monospace; box-sizing: border-box;
         }
-        
-        .btn { 
-            color: white; border: none; padding: 15px; width: 100%; border-radius: 12px; 
-            font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; 
+         
+        .btn {  
+            color: white; border: none; padding: 15px; width: 100%; border-radius: 12px;  
+            font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s;  
             text-transform: uppercase; letter-spacing: 1px;
         }
         .btn-pc { background: var(--pc); }
@@ -66,13 +67,13 @@
         .btn-bypass { background: var(--bypass); }
         .btn-vip { background: linear-gradient(90deg, #ffd700, #ffa500); color: black; }
 
-        .btn:disabled { background: #555; cursor: not-allowed; }
+        .btn:disabled { background: #555 !important; cursor: not-allowed; }
 
         #admin-section { display: none; padding: 50px 20px; background: rgba(0,0,0,0.98); border-top: 5px solid var(--nagi-red); margin-top: 50px; }
         .order-table { width: 100%; border-collapse: collapse; color: white; margin-top: 20px; }
         .order-table th, .order-table td { border: 1px solid #222; padding: 15px; text-align: center; }
         .order-table th { background: var(--nagi-red); }
-        
+         
         footer { padding: 40px; text-align: center; color: #333; letter-spacing: 5px; font-weight: bold; transition: 0.3s; cursor: pointer; }
         footer:hover { color: var(--nagi-red); }
     </style>
@@ -83,27 +84,27 @@
 
 <header>
     <h1>NAGI STORE 💎</h1>
-    <p>بوابتك الرسمية للبانلات المدفوعة /Your official gateway to paid panels </p>
+    <p>بوابتك الرسمية للبانلات المدفوعة / Your official gateway to paid panels</p>
 </header>
 
 <h2 class="section-title"><i class="fas fa-desktop"></i> PC_PANEL</h2>
 <div class="container">
     <div class="card"><h3>PC FREE</h3><div class="price">FREE</div><input type="text" id="pc1" class="id-input" placeholder="Your name on Discord"><button onclick="sendOrder('pc1','PC Free', this)" class="btn btn-pc">GET ACCESS</button></div>
-    <div class="card" style="border-color: var(--nagi-cyan);"><h3>PC Premium</h3><div class="price">20$</div><input type="text" id="pc2" class="id-input" placeholder="Your name on Discord"><button onclick="sendOrder('pc2','PC Pro', this)" class="btn btn-pc">PURCHASE</button></div>
+    <div class="card" style="border-color: var(--nagi-cyan);"><h3>PC Premium</h3><div class="price">20$</div><input type="text" id="pc2" class="id-input" placeholder="Your name on Discord"><button onclick="sendOrder('pc2','PC Premium', this)" class="btn btn-pc">PURCHASE</button></div>
     <div class="card" style="border-color: #ffd700;"><h3>PC VIP</h3><div class="price">40$</div><input type="text" id="pc3" class="id-input" placeholder="Your name on Discord"><button onclick="sendOrder('pc3','PC VIP', this)" class="btn btn-vip">PURCHASE</button></div>
 </div>
 
 <h2 class="section-title"><i class="fas fa-shield-alt"></i> BYPASS</h2>
 <div class="container">
     <div class="card"><h3>Bypass Free</h3><div class="price">FREE</div><input type="text" id="bp1" class="id-input" placeholder="Your name on Discord"><button onclick="sendOrder('bp1','Bypass Free', this)" class="btn btn-bypass">GET ACCESS</button></div>
-    <div class="card" style="border-color: var(--bypass);"><h3>Bypass Premium</h3><div class="price">10$</div><input type="text" id="bp2" class="id-input" placeholder="Your name on Discord"><button onclick="sendOrder('bp2','Bypass Pro', this)" class="btn btn-bypass">PURCHASE</button></div>
+    <div class="card" style="border-color: var(--bypass);"><h3>Bypass Premium</h3><div class="price">10$</div><input type="text" id="bp2" class="id-input" placeholder="Your name on Discord"><button onclick="sendOrder('bp2','Bypass Premium', this)" class="btn btn-bypass">PURCHASE</button></div>
 </div>
 
 <h2 class="section-title"><i class="fas fa-mobile-alt"></i> MOBILE_PANEL</h2>
 <div class="container">
     <div class="card"><h3>Mob Free</h3><div class="price">FREE</div><input type="text" id="m1" class="id-input" placeholder="Your name on Discord"><button onclick="sendOrder('m1','Mob Free', this)" class="btn btn-mobile">GET ACCESS</button></div>
-    <div class="card" style="border-color: var(--mobile);"><h3>Mob Premium</h3><div class="price">25$</div><input type="text" id="m2" class="id-input" placeholder="Your name on Discord"><button onclick="sendOrder('m2','Mob Pro', this)" class="btn btn-mobile">PURCHASE</button></div>
-    <div class="card" style="border-color: #ffd700;"><h3>Mob VIP</h3><div class="price">30$</div><input type="text" id="m3" class="id-input" placeholder="PYour name on Discord"><button onclick="sendOrder('m3','Mob VIP', this)" class="btn btn-vip">PURCHASE</button></div>
+    <div class="card" style="border-color: var(--mobile);"><h3>Mob Premium</h3><div class="price">25$</div><input type="text" id="m2" class="id-input" placeholder="Your name on Discord"><button onclick="sendOrder('m2','Mob Premium', this)" class="btn btn-mobile">PURCHASE</button></div>
+    <div class="card" style="border-color: #ffd700;"><h3>Mob VIP</h3><div class="price">30$</div><input type="text" id="m3" class="id-input" placeholder="Your name on Discord"><button onclick="sendOrder('m3','Mob VIP', this)" class="btn btn-vip">PURCHASE</button></div>
 </div>
 
 <div id="admin-section">
@@ -118,11 +119,11 @@
 
 <footer onclick="loginAdmin()">DESIGNED BY NAGI X PRO © 2026</footer>
 
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 
 <script>
-    // النجوم والـ Firebase والـ Webhook (نفس الكود المصلح السابق)
+    // تأثير النجوم
     const starContainer = document.getElementById('star-container');
     for (let i = 0; i < 50; i++) {
         const star = document.createElement('div');
@@ -135,6 +136,7 @@
         starContainer.appendChild(star);
     }
 
+    // Firebase Config
     const firebaseConfig = {
         apiKey: "AIzaSyATcxGXTqFzl0P9uG74fV21sNEs_8XWScc",
         authDomain: "nagishop-d1245.firebaseapp.com",
@@ -144,48 +146,73 @@
         messagingSenderId: "441739735134",
         appId: "1:441739735134:web:d597a678f84b4f763384cf"
     };
-    if (!firebase.apps.length) { firebase.initializeApp(firebaseConfig); }
-    const db = firebase.database();
 
+    // تأكيد الاتصال بـ Firebase
+    try {
+        if (!firebase.apps.length) {
+            firebase.initializeApp(firebaseConfig);
+        }
+        console.log("Firebase Connected!");
+    } catch (e) {
+        console.error("Firebase connection failed", e);
+    }
+
+    const db = firebase.database();
     const discordWebhookUrl = "https://discord.com/api/webhooks/1475210808626516038/4PA8Ncmm-eIMTu8exqTwVfD02FWKu_acdGaTu79kBbznBEAmmbaEyTlh840c5uBXq5Hb";
 
     async function sendOrder(inputId, type, btnElement) {
         let inputField = document.getElementById(inputId);
         let name = inputField.value.trim();
+        
         if(name !== "") {
+            const originalText = btnElement.innerText;
             btnElement.disabled = true;
-            btnElement.innerText = "جاري الإرسال...";
+            btnElement.innerText = "...";
+
             try {
-                await db.ref('orders').push({ product: type, customer: name, time: new Date().toLocaleString(), status: 'pending' });
+                // 1. حفظ في Firebase
+                await db.ref('orders').push({ 
+                    product: type, 
+                    customer: name, 
+                    time: new Date().toLocaleString(), 
+                    status: 'pending' 
+                });
+
+                // 2. إرسال لـ Discord
                 if(discordWebhookUrl) {
                     await fetch(discordWebhookUrl, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
                             username: "NAGI STORE BOT",
-                            content: "🚀 **طلب جديد وصل يا ناجي!** @everyone",
+                            content: "🚀 **طلب جديد وصل!** @everyone",
                             embeds: [{
-                                title: "تفاصيل الطلب الجديد",
+                                title: "NAGI STORE ORDER",
                                 color: 16711765,
                                 fields: [
                                     { name: "👤 الزبون", value: "`" + name + "`", inline: true },
                                     { name: "📦 المنتج", value: "`" + type + "`", inline: true }
                                 ],
-                                footer: { text: "تاريخ الطلب: " + new Date().toLocaleString() }
+                                timestamp: new Date()
                             }]
                         })
                     });
                 }
-                alert("✅ تم إرسال الطلب بنجاح! سيتم تحويلك للدعم الآن.");
+                
+                alert("✅ تم الإرسال بنجاح!");
                 window.location.href = "https://discord.gg/hkDGqjK2yn";
+                
             } catch (error) {
-                alert("❌ حدث خطأ، حاول مرة أخرى.");
+                console.error(error);
+                alert("❌ فشل الإرسال، تحقق من الإنترنت.");
             } finally {
                 btnElement.disabled = false;
-                btnElement.innerText = "PURCHASE";
+                btnElement.innerText = originalText;
                 inputField.value = "";
             }
-        } else { alert("اكتب اسمك في ديسكورد اولا!"); }
+        } else { 
+            alert("اكتب اسمك في ديسكورد أولاً!"); 
+        }
     }
 
     function loginAdmin() {
@@ -194,18 +221,22 @@
         if(user === "admin" && pass === "nagi2026") { 
             document.getElementById('admin-section').style.display = "block"; 
             loadOrders(); 
-        } else { alert("دخول غير مصرح به!"); }
+        } else { alert("خطأ في البيانات!"); }
     }
 
     function loadOrders() {
         db.ref('orders').on('value', (s) => {
-            const list = document.getElementById('orders-list'); list.innerHTML = "";
+            const list = document.getElementById('orders-list'); 
+            list.innerHTML = "";
             s.forEach((c) => {
-                const d = c.val(); const k = c.key;
+                const d = c.val(); 
+                const k = c.key;
                 const isDone = d.status === 'done';
                 list.innerHTML += `
-                    <tr style="${isDone ? 'background: rgba(0,255,0,0.1);' : ''}">
-                        <td>${d.customer}</td><td>${d.product}</td><td>${isDone ? '✅ مكتمل' : '⏳ انتظار'}</td>
+                    <tr style="${isDone ? 'opacity: 0.5; background: rgba(0,255,0,0.05);' : ''}">
+                        <td>${d.customer}</td>
+                        <td>${d.product}</td>
+                        <td>${isDone ? '✅ مكتمل' : '⏳ انتظار'}</td>
                         <td>
                             <button onclick="db.ref('orders/${k}').update({status:'done'})">✔</button>
                             <button onclick="db.ref('orders/${k}').remove()" style="background:red; color:white;">✖</button>
